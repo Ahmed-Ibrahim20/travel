@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html
-    lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
     dir="{{ in_array(app()->getLocale(), ['ar','ar_EG','ar-SA']) ? 'rtl' : 'ltr' }}"
     data-theme="light">
 
@@ -10,13 +9,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', config('app.name', 'TravelApp'))</title>
-    <meta name="description" content="@yield('meta_description', 'لوحة تحكم ' . config('app.name', 'TravelApp'))">
+    <meta name="description" content="@yield('meta_description', 'Dashboard of ' . config('app.name', 'TravelApp'))">
     <link rel="canonical" href="{{ url()->current() }}" />
 
     {{-- Fonts --}}
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet">
 
-    {{-- Bootstrap (LTR/RTL حسب اللغة) --}}
+    {{-- Bootstrap (LTR/RTL depending on language) --}}
     @if(in_array(app()->getLocale(), ['ar','ar_EG','ar-SA']))
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
@@ -38,7 +37,7 @@
     {{-- SweetAlert2 --}}
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    {{-- متغيرات ألوان + تحسينات UI خفيفة --}}
+    {{-- UI Colors + Small Enhancements --}}
     <style>
         .image-upload-wrapper {
             background: #f9f9fb;
@@ -52,16 +51,12 @@
 
         :root {
             --primary: #4f46e5;
-            /* indigo-600 */
             --primary-700: #4338ca;
             --accent: #f59e0b;
-            /* amber-500 */
             --bg: #f6f7fb;
             --card: #ffffff;
             --text: #1f2937;
-            /* gray-800 */
             --muted: #6b7280;
-            /* gray-500 */
             --hover: rgba(79, 70, 229, .08);
             --active: rgba(79, 70, 229, .16);
         }
@@ -179,27 +174,32 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('dashboard*') ? 'active' : '' }}"
-                            href="{{ route('dashboard') }}">الرئيسية</a>
+                            href="{{ route('dashboard') }}">Home</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('users.*') ? 'active' : '' }}"
-                            href="{{ route('users.index') }}">المستخدمين</a>
+                            href="{{ route('users.index') }}">Users</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('destinations.*') ? 'active' : '' }}"
-                            href="{{ route('destinations.index') }}">الوجهات</a>
+                            href="{{ route('destinations.index') }}">Destinations</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('tours.*') ? 'active' : '' }}"
-                            href="{{ route('tours.index') }}">الرحلات</a>
+                            href="{{ route('tours.index') }}">Tours</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('rateplans.*') ? 'active' : '' }}"
-                            href="{{ route('rateplans.index') }}">خطط الأسعار</a>
+                            href="{{ route('rateplans.index') }}">Rate Plans</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('bookings.*') ? 'active' : '' }}"
+                            href="{{ route('bookings.index') }}">Bookings</a>
                     </li>
                 </ul>
 
@@ -218,21 +218,21 @@
                                 <a class="dropdown-item d-flex align-items-center gap-2"
                                     href="{{ route('profile.edit') }}">
                                     <i class="fa-solid fa-user text-muted"></i>
-                                    <span>الملف الشخصي</span>
+                                    <span>Profile</span>
                                 </a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                {{-- فورم الخروج --}}
+                                {{-- Logout Form --}}
                                 <form id="logout-form" method="POST" action="{{ route('logout') }}" class="d-none">
                                     @csrf
                                 </form>
                                 <button type="button" class="dropdown-item d-flex align-items-center gap-2 text-danger"
                                     onclick="confirmLogout()">
                                     <i class="fa-solid fa-right-from-bracket"></i>
-                                    <span>تسجيل الخروج</span>
+                                    <span>Logout</span>
                                 </button>
                             </li>
                         </ul>
@@ -243,7 +243,7 @@
         </div>
     </nav>
 
-    {{-- Breadcrumb اختياري --}}
+    {{-- Breadcrumb (Optional) --}}
     @if(View::hasSection('breadcrumb'))
     <div class="container mt-3">
         <div class="card-soft p-3">
@@ -303,15 +303,15 @@
         crossorigin="anonymous"></script>
 
     <script>
-        // تأكيد تسجيل الخروج
+        // Confirm Logout
         function confirmLogout() {
             Swal.fire({
-                title: 'هل أنت متأكد؟',
-                text: 'سيتم تسجيل الخروج من الحساب.',
+                title: 'Are you sure?',
+                text: 'You will be logged out.',
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'نعم، خروج',
-                cancelButtonText: 'إلغاء',
+                confirmButtonText: 'Yes, Logout',
+                cancelButtonText: 'Cancel',
                 confirmButtonColor: '#dc3545',
                 cancelButtonColor: '#6c757d'
             }).then((result) => {
@@ -321,7 +321,7 @@
             });
         }
 
-        // Dark/Light Theme Toggle مع حفظ الاختيار
+        // Dark/Light Theme Toggle with LocalStorage
         (function themeBoot() {
             const storageKey = 'travelapp-theme';
             const html = document.documentElement;
@@ -330,15 +330,17 @@
 
             const btn = document.getElementById('themeToggle');
 
-
             // Sync icon on load
-            btn.innerHTML = html.getAttribute('data-theme') === 'dark' ?
-                '<i class="fa-solid fa-sun"></i>' :
-                '<i class="fa-solid fa-moon"></i>';
+            if (btn) {
+                btn.innerHTML = html.getAttribute('data-theme') === 'dark' ?
+                    '<i class="fa-solid fa-sun"></i>' :
+                    '<i class="fa-solid fa-moon"></i>';
+            }
         })();
     </script>
 
     @stack('scripts')
+    @yield('scripts')
 </body>
 
 </html>

@@ -113,7 +113,7 @@ class SeoController extends Controller
 
     private function getTourDetailSeoData($locale, $tour)
     {
-        if (!$tour) return $this->getHomeSeoData($locale);
+        if (!$tour || is_string($tour)) return $this->getHomeSeoData($locale);
 
         $tourName = $tour->getTranslatedTitle();
         $tourDescription = $tour->getTranslatedDescription();

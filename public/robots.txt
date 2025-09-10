@@ -10,15 +10,18 @@ Disallow: /*?*
 Allow: /*?utm_*
 Allow: /*?fbclid=*
 Allow: /*?gclid=*
+Allow: /tours/
+Allow: /destinations/
+Allow: /interface/
 
 # Crawl-delay for different bots
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: {{ url('/sitemap.xml') }}
-Sitemap: {{ url('/sitemap-images.xml') }}
-Sitemap: {{ url('/sitemap-tours.xml') }}
-Sitemap: {{ url('/sitemap-destinations.xml') }}
+Sitemap: https://dahabdreamtours.com/sitemap.xml
+Sitemap: https://dahabdreamtours.com/sitemap-images.xml
+Sitemap: https://dahabdreamtours.com/sitemap-tours.xml
+Sitemap: https://dahabdreamtours.com/sitemap-destinations.xml
 
 # Block bad bots
 User-agent: AhrefsBot

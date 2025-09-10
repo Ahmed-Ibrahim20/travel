@@ -6,7 +6,10 @@
         $pageType = request()->routeIs('interface.main') ? 'home' : 
                    (request()->routeIs('interface.tours*') ? 'tours' : 
                    (request()->routeIs('interface.details') ? 'tour_detail' : 'home'));
-        $entity = isset($tour) ? $tour : (isset($destination) ? $destination : null);
+        
+        // Only pass tour entity for tour detail pages, not for tours listing pages
+        $entity = (request()->routeIs('interface.details') && isset($tour)) ? $tour : 
+                 (request()->routeIs('interface.details') && isset($destination) ? $destination : null);
         $seoData = $seoController->getSeoData($pageType, $entity);
         $alternateUrls = $seoController->getAlternateUrls(request()->getPathInfo());
         $faqs = $seoController->getFaqData(app()->getLocale());
@@ -16,7 +19,7 @@
         if (request()->routeIs('interface.details') && isset($tour)) {
             $breadcrumbs = $seoController->generateBreadcrumbs([
                 ['name' => __('interface.nav.tours'), 'url' => route('interface.tours')],
-                ['name' => $tour->destination->getTranslatedName(), 'url' => route('interface.toursByDestination', $tour->destination->slug)],
+                ['name' => $tour->destination->getTranslatedName(), 'url' => route('interface.tours', $tour->destination->slug)],
                 ['name' => $tour->getTranslatedTitle(), 'url' => url()->current()]
             ]);
         }

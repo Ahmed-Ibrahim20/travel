@@ -6,7 +6,9 @@
 @section('content')
 <!-- Hero -->
 <section id="hero" class="hero-section position-relative text-white text-center">
-    <img src="{{ asset('assets/img/hero.jpg') }}" class="hero-bg" alt="Beach" />
+    <!-- <img src="{{ asset('assets/img/hero.jpg') }}" class="hero-bg" alt="Beach" /> -->
+    <img src="{{ asset('assets/img/travel_tours-egypt.jpg') }}" class="hero-bg" alt="Beach" />
+    <!-- <img src="{{ asset('assets/img/travel_tours-.jpg') }}" class="hero-bg" alt="Beach" /> -->
     <div class="hero-content container mt-5 pt-5">
         <h1 class="display-4 fw-bold mt-5">{{ __('interface.hero.title') }}</h1>
         <p class="lead mb-4">
@@ -45,7 +47,7 @@
                             class="card-img-top"
                             alt="{{ $destination->getTranslatedName() }}" style="height:220px; object-fit:cover;" />
                         <div class="overlay d-flex align-items-end p-3">
-                            <h4 class="overlay-text text-white m-0">{{ $destination->getTranslatedName() }} {{ __('Trips') }}</h4>
+                            <h4 class="overlay-text text-white m-0">{{ $destination->getTranslatedName() }} </h4>
                         </div>
                     </div>
                 </button>

@@ -61,7 +61,7 @@
                                             @foreach($tours as $tour)
                                             <option value="{{ $tour->id }}"
                                                 {{ old('tour_id', $rateplan->tour_id) == $tour->id ? 'selected' : '' }}>
-                                                {{ $tour->title['en'] ?? $tour->title['ar'] ?? 'N/A' }}
+                                                {{ $tour->title['en'] ?? $tour->title['de'] ?? 'N/A' }}
                                                 <small>({{ $tour->destination->name['en'] ?? 'N/A' }})</small>
                                             </option>
                                             @endforeach
@@ -69,6 +69,84 @@
                                         @error('tour_id')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
+                                    </div>
+                                </div>
+
+                                <!-- Room & Date Information -->
+                                <div class="card border-0 shadow-sm mb-4">
+                                    <div class="card-header bg-info text-white">
+                                        <h6 class="mb-0"><i class="fas fa-bed me-2"></i> Room & Date Details</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12 mb-3">
+                                                <label for="room_type" class="form-label fw-semibold">Room Type</label>
+                                                <select class="form-select @error('room_type') is-invalid @enderror"
+                                                    id="room_type" name="room_type">
+                                                    <option value="">Select Room Type</option>
+                                                    <option value="Single" {{ old('room_type', $rateplan->room_type) == 'Single' ? 'selected' : '' }}>Single</option>
+                                                    <option value="Double" {{ old('room_type', $rateplan->room_type) == 'Double' ? 'selected' : '' }}>Double</option>
+                                                    <option value="Triple" {{ old('room_type', $rateplan->room_type) == 'Triple' ? 'selected' : '' }}>Triple</option>
+                                                </select>
+                                                @error('room_type')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="start_date" class="form-label fw-semibold">Start Date *</label>
+                                                <input type="date" class="form-control @error('start_date') is-invalid @enderror"
+                                                    id="start_date" name="start_date" value="{{ old('start_date', $rateplan->start_date ? $rateplan->start_date->format('Y-m-d') : '') }}" required>
+                                                @error('start_date')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="end_date" class="form-label fw-semibold">End Date *</label>
+                                                <input type="date" class="form-control @error('end_date') is-invalid @enderror"
+                                                    id="end_date" name="end_date" value="{{ old('end_date', $rateplan->end_date ? $rateplan->end_date->format('Y-m-d') : '') }}" required>
+                                                @error('end_date')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Board & Transportation -->
+                                <div class="card border-0 shadow-sm mb-4">
+                                    <div class="card-header bg-warning text-dark">
+                                        <h6 class="mb-0"><i class="fas fa-utensils me-2"></i> Board & Transport</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12 mb-3">
+                                                <label for="board_type" class="form-label fw-semibold">Board Type</label>
+                                                <select class="form-select @error('board_type') is-invalid @enderror"
+                                                    id="board_type" name="board_type">
+                                                    <option value="">Select Board Type</option>
+                                                    <option value="All Inclusive" {{ old('board_type', $rateplan->board_type) == 'All Inclusive' ? 'selected' : '' }}>All Inclusive</option>
+                                                    <option value="Half Board" {{ old('board_type', $rateplan->board_type) == 'Half Board' ? 'selected' : '' }}>Half Board</option>
+                                                    <option value="Full Board" {{ old('board_type', $rateplan->board_type) == 'Full Board' ? 'selected' : '' }}>Full Board</option>
+                                                    <option value="Bed & Breakfast" {{ old('board_type', $rateplan->board_type) == 'Bed & Breakfast' ? 'selected' : '' }}>Bed & Breakfast</option>
+                                                </select>
+                                                @error('board_type')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <label for="transportation" class="form-label fw-semibold">Transportation</label>
+                                                <select class="form-select @error('transportation') is-invalid @enderror"
+                                                    id="transportation" name="transportation">
+                                                    <option value="">Select Transportation</option>
+                                                    <option value="No transfers" {{ old('transportation', $rateplan->transportation) == 'No transfers' ? 'selected' : '' }}>No transfers</option>
+                                                    <option value="Bus" {{ old('transportation', $rateplan->transportation) == 'Bus' ? 'selected' : '' }}>Bus</option>
+                                                    <option value="Private car" {{ old('transportation', $rateplan->transportation) == 'Private car' ? 'selected' : '' }}>Private car</option>
+                                                </select>
+                                                @error('transportation')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -102,7 +180,7 @@
                                                     <option value="USD" {{ old('currency', $rateplan->currency) == 'USD' ? 'selected' : '' }}>USD ($)</option>
                                                     <option value="EUR" {{ old('currency', $rateplan->currency) == 'EUR' ? 'selected' : '' }}>EUR (€)</option>
                                                     <option value="EGP" {{ old('currency', $rateplan->currency) == 'EGP' ? 'selected' : '' }}>EGP (ج.م)</option>
-                                                    <option value="SAR" {{ old('currency', $rateplan->currency) == 'SAR' ? 'selected' : '' }}>SAR (ر.س)</option>
+                                                    <option value="GBP" {{ old('currency', $rateplan->currency) == 'GBP' ? 'selected' : '' }}>GBP (£)</option>
                                                 </select>
                                                 @error('currency')
                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -134,13 +212,13 @@
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="name_ar" class="form-label fw-semibold">
-                                                <img src="https://flagcdn.com/16x12/sa.png" alt="AR" class="me-2"> Arabic
+                                            <label for="name_de" class="form-label fw-semibold">
+                                                <img src="https://flagcdn.com/16x12/de.png" alt="DE" class="me-2"> German
                                             </label>
-                                            <input type="text" class="form-control form-control-lg @error('name.ar') is-invalid @enderror"
-                                                id="name_ar" name="name[ar]" placeholder="أدخل اسم الخطة بالعربية"
-                                                value="{{ old('name.ar', $rateplan->name['ar'] ?? '') }}">
-                                            @error('name.ar')
+                                            <input type="text" class="form-control form-control-lg @error('name.de') is-invalid @enderror"
+                                                id="name_de" name="name[de]" placeholder="Geben Sie den Plan auf Deutsch ein"
+                                                value="{{ old('name.de', $rateplan->name['de'] ?? '') }}">
+                                            @error('name.de')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
                                         </div>
@@ -163,7 +241,7 @@
 
                         <!-- Plan Details Section -->
                         <div class="card border-0 shadow-sm mb-4">
-                            <div class="card-header bg-secondary text-white">
+                            <div class="card-header bg-warning text-dark">
                                 <h6 class="mb-0"><i class="fas fa-list-alt me-2"></i> Plan Details</h6>
                             </div>
                             <div class="card-body">
@@ -181,13 +259,13 @@
                                     </div>
 
                                     <div class="col-md-4 mb-3">
-                                        <label for="details_ar" class="form-label fw-semibold">
-                                            <img src="https://flagcdn.com/16x12/sa.png" alt="AR" class="me-2"> Details (Arabic)
+                                        <label for="details_de" class="form-label fw-semibold">
+                                            <img src="https://flagcdn.com/16x12/de.png" alt="DE" class="me-2"> Details (German)
                                         </label>
-                                        <textarea class="form-control @error('details.ar') is-invalid @enderror"
-                                            id="details_ar" name="details[ar]" rows="4"
-                                            placeholder="أدخل تفاصيل الخطة بالعربية">{{ old('details.ar', $rateplan->details['ar'] ?? '') }}</textarea>
-                                        @error('details.ar')
+                                        <textarea class="form-control @error('details.de') is-invalid @enderror"
+                                            id="details_de" name="details[de]" rows="4"
+                                            placeholder="Geben Sie die Details des Plans auf Deutsch ein">{{ old('details.de', $rateplan->details['de'] ?? '') }}</textarea>
+                                        @error('details.de')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                     </div>

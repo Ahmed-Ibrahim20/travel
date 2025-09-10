@@ -16,6 +16,12 @@ Route::prefix('interface')->name('interface.')->group(function () {
     // Main interface page
     Route::get('/', [InterfaceController::class, 'main'])->name('main');
     
+    // Tours by destination (for breadcrumbs)
+    Route::get('/destination/{destination}', [InterfaceController::class, 'tours'])->name('toursByDestination');
+    
+    // Tours by type and destination
+    Route::get('/tours/{destination}/{type}', [InterfaceController::class, 'toursByType'])->name('toursByType');
+    
     // Tours listing page
     Route::get('/tours/{destination?}', [InterfaceController::class, 'tours'])->name('tours');
     

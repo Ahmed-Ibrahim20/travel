@@ -86,6 +86,11 @@ class Tour extends Model
     /**
      * Accessor للصور (يرجع Array of URLs)
      */
+    public function getTranslatedName(?string $locale = null): string
+    {
+        return $this->getTranslatedTitle($locale);
+    }
+
     public function getImageUrlsAttribute(): array
     {
         $urls = [];
