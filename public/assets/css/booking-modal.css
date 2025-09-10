@@ -1,0 +1,365 @@
+/* ===========================
+   Booking Modal Styles
+   =========================== */
+
+/* Modal Booking Specific Styles */
+.modal-booking .modal-content {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modal-booking .modal-header {
+  background: linear-gradient(135deg, #4a90e2, #6c63ff);
+  color: white;
+  border-radius: 16px 16px 0 0;
+  padding: 1.5rem;
+}
+
+.modal-booking .modal-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.modal-booking .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+  opacity: 0.9;
+}
+
+.modal-booking .btn-close:hover {
+  opacity: 1;
+}
+
+/* Step Sections */
+.step-section {
+  transition: all 0.3s ease;
+}
+
+.step-section .card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.step-section .card-header {
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+}
+
+.step-section .card-body {
+  padding: 1.5rem;
+}
+
+/* Payment Cards */
+.payment-option {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.payment-option:hover {
+  transform: translateY(-2px);
+}
+
+/* Payment Cards Styling */
+.payment-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.payment-card.selected {
+  border-color: #007bff !important;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.payment-card.border-primary {
+  border-color: #4a90e2 !important;
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.payment-card.bg-light {
+  background-color: rgba(74, 144, 226, 0.05) !important;
+}
+
+/* Flash Animation for Payment Icons */
+@keyframes flashPulse {
+    0% { 
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+    25% { 
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.3);
+    }
+    50% { 
+        transform: scale(1.1);
+        box-shadow: 0 0 0 20px rgba(0, 123, 255, 0.1);
+    }
+    75% { 
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.3);
+    }
+    100% { 
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+.payment-card.flash-effect {
+    animation: flashPulse 1.5s ease-in-out;
+}
+
+.payment-card .fas {
+    transition: all 0.3s ease;
+}
+
+.payment-card.flash-effect .fas {
+    animation: iconGlow 1.5s ease-in-out;
+}
+
+@keyframes iconGlow {
+    0%, 100% { 
+        filter: brightness(1) drop-shadow(0 0 0 transparent);
+    }
+    50% { 
+        filter: brightness(1.5) drop-shadow(0 0 15px rgba(0, 123, 255, 0.8));
+    }
+}
+
+/* Enhanced Toast Animations */
+.toast {
+    animation: slideInLeft 0.4s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast.hiding {
+    animation: slideOutLeft 0.3s ease-in forwards;
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Form Controls */
+.modal-booking .form-control,
+.modal-booking .form-select {
+  border-radius: 8px;
+  border: 1px solid #e0e6ed;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.modal-booking .form-control:focus,
+.modal-booking .form-select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.modal-booking .form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.modal-booking .btn {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modal-booking .btn-primary {
+  background: linear-gradient(135deg, #4a90e2, #6c63ff);
+  border: none;
+}
+
+.modal-booking .btn-primary:hover {
+  background: linear-gradient(135deg, #357abd, #5a52d5);
+  transform: translateY(-1px);
+}
+
+.modal-booking .btn-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border: none;
+}
+
+.modal-booking .btn-success:hover {
+  background: linear-gradient(135deg, #218838, #1ba085);
+  transform: translateY(-1px);
+}
+
+.modal-booking .btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.modal-booking .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+/* Summary Section */
+.modal-booking .summary-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+}
+
+.modal-booking .summary-section hr {
+  border-color: #dee2e6;
+  margin: 1rem 0;
+}
+
+/* Package Details Cards */
+.modal-booking .card-header.bg-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3) !important;
+}
+
+.modal-booking .card-header.bg-success {
+  background: linear-gradient(135deg, #28a745, #1e7e34) !important;
+}
+
+.modal-booking .card-header.bg-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800) !important;
+}
+
+.modal-booking .card-header.bg-info {
+  background: linear-gradient(135deg, #17a2b8, #138496) !important;
+}
+
+/* Alert Styles */
+.modal-booking .alert {
+  border-radius: 8px;
+  border: none;
+}
+
+.modal-booking .alert-info {
+  background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+  color: #0c5460;
+}
+
+.modal-booking .alert-primary {
+  background: linear-gradient(135deg, #d1ecf1, #cce7ff);
+  color: #004085;
+}
+
+/* File Upload */
+.modal-booking input[type="file"] {
+  border: 2px dashed #dee2e6;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.modal-booking input[type="file"]:hover {
+  border-color: #4a90e2;
+  background: rgba(74, 144, 226, 0.05);
+}
+
+/* Form Check (Radio Buttons) */
+.modal-booking .form-check {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.modal-booking .form-check:hover {
+  background: rgba(74, 144, 226, 0.05);
+}
+
+.modal-booking .form-check-input:checked {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+}
+
+.modal-booking .form-check-label {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-booking .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  .modal-booking .modal-content {
+    border-radius: 12px;
+  }
+  
+  .modal-booking .card-body {
+    padding: 1rem;
+  }
+  
+  .modal-booking .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Loading States */
+.modal-booking .btn.loading {
+  position: relative;
+  color: transparent;
+}
+
+.modal-booking .btn.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Text Utilities */
+.modal-booking .text-primary-strong {
+  color: #4a90e2 !important;
+  font-weight: 700;
+}
+
+.modal-booking .muted {
+  color: #6c757d;
+}
+
+.modal-booking .small {
+  font-size: 0.875rem;
+}

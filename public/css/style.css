@@ -1,0 +1,111 @@
+:root {
+    --main-color--: #7C9A6D;
+    --beige-color--: #dee2e6;
+    --hover-color--: #4A4A4A;
+    --white-color--: #ffffff;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease 0.5s, transform 1s ease 0.5s;
+    will-change: opacity, transform;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .fade-in-left {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease 0.5s, transform 1s ease 0.5s;
+    will-change: opacity, transform;
+  }
+  
+  .fade-in-left.visible {
+    opacity: 1;
+    transform: translateY(0px);
+  }  
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif !important;
+    background-image: url('../images/seamless-islamic-pattern-3d-traditional-arabic-design-element-vector.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f6f0f094;
+    z-index: -1;
+}
+body input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.container {
+    position: relative;
+    z-index: 1;
+}
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--beige-color--);
+}
+.card-header {
+    background-color: var(--beige-color--);
+    border-bottom: none;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+.card-header h4 {
+    color: var(--hover-color--);
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: var(--main-color--);
+    border-color: var(--main-color--);
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+.btn-primary:focus {
+    background-color: var(--main-color--)!important;
+    border-color: var(--main-color--)!important;
+}
+.btn-primary:hover {
+    background-color: var(--hover-color--);
+    border-color: var(--hover-color--);
+}
+.form-label {
+    font-weight: 500;
+    color: var(--hover-color--);
+}
+a {
+    color: var(--hover-color--);
+}
+a:hover {
+    color: var(--main-color--);
+}
+.close-btn {
+	font-size: 30px;
+	color: #000;
+	background: transparent;
+	border: none;
+	position: absolute;
+	top: 0px;
+	cursor: pointer;
+}
+.close-btn {
+	right: 10px;
+}
+.close-btn:hover{
+    color: var(--main-color--);
+}

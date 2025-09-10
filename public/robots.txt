@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /*.json$
+Disallow: /*?*
+Allow: /*?utm_*
+Allow: /*?fbclid=*
+Allow: /*?gclid=*
+
+# Crawl-delay for different bots
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: {{ url('/sitemap.xml') }}
+Sitemap: {{ url('/sitemap-images.xml') }}
+Sitemap: {{ url('/sitemap-tours.xml') }}
+Sitemap: {{ url('/sitemap-destinations.xml') }}
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

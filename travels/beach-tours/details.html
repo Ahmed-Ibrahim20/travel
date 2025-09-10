@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Golf Strand Taba Heights — Trip Details | Sun & Sea Tours</title>
+    <meta
+      name="description"
+      content="Golf Strand Taba Heights — trip details, gallery, packages & book now. Sun & Sea Tours"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- AOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/details.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar-wrapper fixed-top">
+      <nav class="navbar navbar-expand-lg py-2">
+        <div class="container">
+          <!-- Logo -->
+          <a
+            class="navbar-brand fw-bold d-flex align-items-center me-4"
+            href="#"
+          >
+            <img src="assets/img/logo.png" alt="Logo" width="48" class="me-2" />
+            <span class="brand-text">Sun & Sea Tours</span>
+          </a>
+
+          <!-- Toggler -->
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Links -->
+          <div id="nav" class="collapse navbar-collapse">
+            <!-- Left side (logo + links) -->
+            <ul class="navbar-nav ms-0 me-auto">
+              <li class="nav-item">
+                <a href="#hero" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#destinations" class="nav-link">Trips</a>
+              </li>
+              <li class="nav-item">
+                <a href="#popular" class="nav-link">Popular</a>
+              </li>
+              <li class="nav-item">
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Right side (CTA button) -->
+            <div class="d-flex">
+              <a href="#contact" class="btn btn-cta ms-lg-3">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero mt-5">
+      <div class="container container-lg text-white" data-aos="fade-up">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="mb-2">
+              <span class="badge-location"
+                ><i class="fa-solid fa-location-dot"></i> Taba Heights,
+                Egypt</span
+              >
+            </div>
+            <h1>Golf Strand — Taba Heights Resort</h1>
+            <p class="lead">
+              Nestled between the Sinai mountains and the Gulf of Aqaba —
+              private sandy beach, pool & spa. Ideal for families, divers and
+              golfers.
+            </p>
+
+            <div class="d-flex gap-3">
+              <a
+                href="#packages"
+                class="btn btn-custom btn-lg"
+                onclick="document.querySelector('#packages').scrollIntoView({behavior:'smooth'})"
+                >View Packages</a
+              >
+              <button
+                class="btn btn-outline-light btn-lg"
+                onclick="openBookingQuick('default')"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block text-end">
+            <div
+              class="bg-white p-3 rounded-4 shadow-sm"
+              style="display: inline-block"
+            >
+              <div class="small muted">Rating</div>
+              <div class="h4 mb-0 text-primary-strong">
+                4.5 <small class="text-warning ms-2">★ ★ ★ ★ ☆</small>
+              </div>
+              <div class="muted small mt-2">From 1,200+ reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="container container-lg py-5">
+      <div class="row g-4">
+        <!-- LEFT: Gallery + Hotel Info + Packages -->
+        <div class="col-lg-8">
+          <!-- Gallery -->
+          <div class="gallery-card p-3 mb-4" data-aos="fade-up">
+            <h5 class="mb-3">Photo Gallery</h5>
+
+            <!-- Main swiper -->
+            <div class="swiper gallery-swiper mb-3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/dahab.jpg" alt="Fjord Bay" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/marsa_alam.jpg" alt="Pool & Beach" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/sharm_el_sheikh.jpg" alt="Rooms" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/Sokhna.webp" alt="Pharaoh's Island" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="swiper thumbs mt-2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/dahab.jpg" alt="Fjord Bay" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/marsa_alam.jpg" alt="Pool & Beach" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/sharm_el_sheikh.jpg" alt="Rooms" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/Sokhna.webp" alt="Pharaoh's Island" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hotel information -->
+          <section class="hotel-info mb-4" data-aos="fade-up">
+            <h3>About Golf Strand — Taba Heights Resort</h3>
+            <p class="lead muted">
+              Golf Strand Taba Heights Resort sits between the Sinai mountains
+              and the Gulf of Aqaba. The resort features a private sandy beach,
+              two outdoor pools and one indoor pool. Guests enjoy free Wi-Fi and
+              free parking. The hotel offers Egyptian and international
+              restaurants, a gym, spa, sauna and steam room. Rooms are
+              air-conditioned and include a flat-screen TV, satellite channels,
+              private bathroom and minibar.
+            </p>
+
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <h6 class="mb-2">Key features</h6>
+                <ul class="list-unstyled muted">
+                  <li>
+                    <i class="fa-solid fa-water me-2 text-primary"></i>Private
+                    sandy beach
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-person-swimming me-2 text-primary"></i
+                    >Outdoor & indoor pools
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-utensils me-2 text-primary"></i
+                    >Multiple restaurants
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-dumbbell me-2 text-primary"></i>Gym &
+                    Spa
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="mb-2">Nearby</h6>
+                <ul class="list-unstyled muted">
+                  <li>
+                    <i class="fa-solid fa-water-ladder me-2 text-primary"></i
+                    >Pharaoh's Island (boat trip)
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-mountain me-2 text-primary"></i
+                    >Colored Canyon excursion
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-ship me-2 text-primary"></i>Snorkeling
+                    & diving spots
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Packages / Seasonal Rates -->
+          <section id="packages" class="mb-4" data-aos="fade-up">
+            <h4 class="mb-3">Packages & Seasonal Rates</h4>
+            <p class="muted small mb-3">
+              Note: Hotel prices are subject to confirmation at booking time due
+              to frequent updates by hotels. Upgrade options and child policy
+              shown below.
+            </p>
+
+            <div class="row g-3">
+              <!-- Season Card (Jul-Sep 2025) -->
+              <div class="col-md-6">
+                <div class="season-card">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <div>
+                      <div class="text-muted small">Period</div>
+                      <div class="rate-title">01 Jul 2025 — 30 Sep 2025</div>
+                    </div>
+                    <div class="text-end">
+                      <div class="muted small">Board</div>
+                      <div class="text-primary-strong">All inclusive</div>
+                    </div>
+                  </div>
+
+                  <div class="mt-2">
+                    <div class="rate-row mb-2">
+                      <div class="muted">Double (per person)</div>
+                      <div class="rate-price">EGP 2,475</div>
+                    </div>
+                    <div class="rate-row mb-2">
+                      <div class="muted">Triple (per person)</div>
+                      <div class="rate-price">EGP 2,475</div>
+                    </div>
+                    <div class="rate-row mb-2">
+                      <div class="muted">Single (per person)</div>
+                      <div class="rate-price">EGP 3,960</div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mt-3 d-flex justify-content-between align-items-center"
+                  >
+                    <button
+                      class="btn btn-outline-primary btn-sm"
+                      onclick="openBooking('01 Jul 2025 — 30 Sep 2025',2475)"
+                    >
+                      Book (Jul–Sep)
+                    </button>
+                    <small class="muted">No transfers</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Season Card (Oct 2025) -->
+              <div class="col-md-6">
+                <div class="season-card">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <div>
+                      <div class="text-muted small">Period</div>
+                      <div class="rate-title">01 Oct 2025 — 31 Oct 2025</div>
+                    </div>
+                    <div class="text-end">
+                      <div class="muted small">Board</div>
+                      <div class="text-primary-strong">All inclusive</div>
+                    </div>
+                  </div>
+
+                  <div class="mt-2">
+                    <div class="rate-row mb-2">
+                      <div class="muted">Double (per person)</div>
+                      <div class="rate-price">EGP 2,230</div>
+                    </div>
+                    <div class="rate-row mb-2">
+                      <div class="muted">Triple (per person)</div>
+                      <div class="rate-price">EGP 2,230</div>
+                    </div>
+                    <div class="rate-row mb-2">
+                      <div class="muted">Single (per person)</div>
+                      <div class="rate-price">EGP 3,565</div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mt-3 d-flex justify-content-between align-items-center"
+                  >
+                    <button
+                      class="btn btn-outline-primary btn-sm"
+                      onclick="openBooking('01 Oct 2025 — 31 Oct 2025',2230)"
+                    >
+                      Book (Oct)
+                    </button>
+                    <small class="muted">No transfers</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Season Card (Nov 1 - Dec 26) -->
+              <div class="col-md-6">
+                <div class="season-card">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <div>
+                      <div class="text-muted small">Period</div>
+                      <div class="rate-title">01 Nov 2025 — 26 Dec 2025</div>
+                    </div>
+                    <div class="text-end">
+                      <div class="muted small">Board</div>
+                      <div class="text-primary-strong">All inclusive</div>
+                    </div>
+                  </div>
+
+                  <div class="mt-2">
+                    <div class="rate-row mb-2">
+                      <div class="muted">Double (per person)</div>
+                      <div class="rate-price">EGP 2,080</div>
+                    </div>
+                    <div class="rate-row mb-2">
+                      <div class="muted">Triple (per person)</div>
+                      <div class="rate-price">EGP 2,080</div>
+                    </div>
+                    <div class="rate-row mb-2">
+                      <div class="muted">Single (per person)</div>
+                      <div class="rate-price">EGP 3,330</div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mt-3 d-flex justify-content-between align-items-center"
+                  >
+                    <button
+                      class="btn btn-outline-primary btn-sm"
+                      onclick="openBooking('01 Nov 2025 — 26 Dec 2025',2080)"
+                    >
+                      Book (Nov–Dec)
+                    </button>
+                    <small class="muted">No transfers</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Season Card (Dec 27-31) -->
+              <div class="col-md-6">
+                <div class="season-card">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <div>
+                      <div class="text-muted small">Period</div>
+                      <div class="rate-title">27 Dec 2025 — 31 Dec 2025</div>
+                    </div>
+                    <div class="text-end">
+                      <div class="muted small">Board</div>
+                      <div class="text-primary-strong">All inclusive</div>
+                    </div>
+                  </div>
+
+                  <div class="mt-2">
+                    <div class="rate-row mb-2">
+                      <div class="muted">Double (per person)</div>
+                      <div class="rate-price">EGP 2,725</div>
+                    </div>
+                    <div class="rate-row mb-2">
+                      <div class="muted">Triple (per person)</div>
+                      <div class="rate-price">EGP 2,725</div>
+                    </div>
+                    <div class="rate-row mb-2">
+                      <div class="muted">Single (per person)</div>
+                      <div class="rate-price">EGP 4,355</div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mt-3 d-flex justify-content-between align-items-center"
+                  >
+                    <button
+                      class="btn btn-outline-primary btn-sm"
+                      onclick="openBooking('27 Dec 2025 — 31 Dec 2025',2725)"
+                    >
+                      Book (Festive)
+                    </button>
+                    <small class="muted">No transfers</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upgrades & child policy -->
+            <div
+              class="mt-4 p-3 rounded-3"
+              style="background: #fff; border: 1px solid #eef4f7"
+            >
+              <h6 class="mb-2">Upgrade Options</h6>
+              <ul class="muted small mb-2">
+                <li>Upgrade to Pool/Sea view room: +EGP 400 / room / night</li>
+                <li>Upgrade to Sea-facing room: +EGP 500 / room / night</li>
+                <li>Upgrade to Superior room: +EGP 700 / room / night</li>
+              </ul>
+
+              <h6 class="mb-2">Child Policy</h6>
+              <ul class="muted small mb-0">
+                <li>First child (up to 11.99 yrs): free.</li>
+                <li>Second child (6 – 11.99 yrs): 50% of adult price.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Trip highlights / nature -->
+          <section class="mb-4" data-aos="fade-up">
+            <h5>Nature & highlights</h5>
+            <p class="muted small">
+              Taba's unique location makes it a jewel on the Red Sea. The area
+              features a dramatic fjord-like bay for diving, the colorful canyon
+              with spectacular sandstone formations, mountain caves and trails
+              in Taba Protectorate, and Pharaoh's Island — a small historic
+              island with excellent snorkeling.
+            </p>
+          </section>
+        </div>
+
+        <!-- RIGHT: Sticky booking summary / quick book -->
+        <aside class="col-lg-4">
+          <div class="sticky-right">
+            <div class="summary-box mb-3">
+              <h6 class="mb-2">Quick Booking</h6>
+              <p class="muted small mb-3">
+                Select dates & options in the booking modal to calculate the
+                total. Click “Proceed to payment” to continue to checkout.
+              </p>
+
+              <div class="d-grid gap-2">
+                <button class="btn btn-custom" onclick="openBookingQuick()">
+                  Quick Book
+                </button>
+                <a class="btn btn-outline-primary" href="tel:16715"
+                  ><i class="fa-solid fa-phone me-2"></i>Call 16715</a
+                >
+              </div>
+            </div>
+
+            <div class="summary-box">
+              <h6 class="mb-2">Contact</h6>
+              <div class="muted small mb-2">
+                <i class="fa-solid fa-phone me-2 text-primary"></i>+20 100 000
+                0000
+              </div>
+              <div class="muted small mb-2">
+                <i class="fa-solid fa-envelope me-2 text-primary"></i
+                >info@example.com
+              </div>
+              <a href="#contact" class="small text-primary-strong"
+                >More help & support →</a
+              >
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Booking Modal -->
+    <div
+      class="modal fade modal-booking"
+      id="bookingModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">Book — Golf Strand Taba Heights</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <form id="bookingForm" class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Package / Season</label>
+                <input
+                  type="text"
+                  id="pkgLabel"
+                  class="form-control"
+                  readonly
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Base price (EGP per person)</label>
+                <input
+                  type="text"
+                  id="pkgPrice"
+                  class="form-control"
+                  readonly
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Check-in</label>
+                <input
+                  type="date"
+                  id="dateFrom"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Check-out</label>
+                <input type="date" id="dateTo" class="form-control" required />
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">Adults</label>
+                <input
+                  type="number"
+                  id="adults"
+                  class="form-control"
+                  min="1"
+                  value="2"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">Children</label>
+                <input
+                  type="number"
+                  id="children"
+                  class="form-control"
+                  min="0"
+                  value="0"
+                />
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">Room type</label>
+                <select id="roomType" class="form-select">
+                  <option value="standard" data-upgrade="0">Standard</option>
+                  <option value="poolSea" data-upgrade="400">
+                    Pool/Sea View (+EGP 400/room/night)
+                  </option>
+                  <option value="seaFacing" data-upgrade="500">
+                    Sea-Facing (+EGP 500/room/night)
+                  </option>
+                  <option value="superior" data-upgrade="700">
+                    Superior (+EGP 700/room/night)
+                  </option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Notes (special requests)</label>
+                <textarea
+                  id="notes"
+                  class="form-control"
+                  rows="2"
+                  placeholder="Diet, accessibility, early check-in..."
+                ></textarea>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Full name</label>
+                <input
+                  type="text"
+                  id="custName"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  id="custPhone"
+                  class="form-control"
+                  placeholder="+20..."
+                  required
+                />
+              </div>
+
+              <!-- Summary -->
+              <div class="col-12">
+                <div
+                  class="p-3 rounded-3"
+                  style="background: #fbfeff; border: 1px solid #eef4f7"
+                >
+                  <div class="d-flex justify-content-between">
+                    <div class="muted small">Nights</div>
+                    <div id="nightsVal" class="text-primary-strong">1</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="muted small">
+                      Total people (adults + children chargeable)
+                    </div>
+                    <div id="peopleVal" class="text-primary-strong">2</div>
+                  </div>
+                  <hr />
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <strong>Total</strong>
+                      <div class="muted small">EGP (estimated)</div>
+                    </div>
+                    <div>
+                      <strong id="totalVal" class="text-primary-strong"
+                        >EGP 0</strong
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 text-end">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary me-2"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Proceed to payment
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================
+   Premium Footer (paste into <body>)
+   =========================== -->
+    <footer class="site-footer" role="contentinfo" aria-label="Footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Brand -->
+            <div class="footer-section footer-brand">
+              <a
+                href="#"
+                class="brand-inline"
+                aria-label="Sun & Sea Tours homepage"
+              >
+                <img
+                  src="assets/img/logo.png"
+                  alt="Sun & Sea Tours logo"
+                  width="56"
+                  height="56"
+                />
+                <div class="brand-text">
+                  <div class="brand-name">Sun & Sea Tours</div>
+                  <div class="brand-sub">
+                    Real trips · Fair prices · Trusted
+                  </div>
+                </div>
+              </a>
+              <p class="brand-desc">
+                We craft hassle-free Red Sea trips — Hurghada, Sharm, Ain Sokhna
+                and more. Personalized service and 24/7 support.
+              </p>
+            </div>
+
+            <!-- Links -->
+            <nav class="footer-section footer-links" aria-label="Quick links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#destinations">Trips</a></li>
+                <li><a href="#popular">Popular</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+
+            <!-- Popular Trips -->
+            <div class="footer-section footer-trips" aria-label="Popular trips">
+              <h4>Popular Trips</h4>
+              <ul class="trip-list">
+                <li>
+                  <a href="trip-details.html?id=1"
+                    ><span>Hurghada — 4D/3N</span></a
+                  >
+                </li>
+                <li>
+                  <a href="trip-details.html?id=2"
+                    ><span>Sharm — 5D/4N</span></a
+                  >
+                </li>
+                <li>
+                  <a href="trip-details.html?id=3"
+                    ><span>Ain Sokhna — 3D/2N</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section footer-contact" aria-label="Contact">
+              <h4>Contact & Newsletter</h4>
+              <div class="contact-lines">
+                <div class="c-row">
+                  <i class="fa-solid fa-phone"></i
+                  ><a href="tel:+201000000000">+20 100 000 0000</a>
+                </div>
+                <div class="c-row">
+                  <i class="fa-solid fa-envelope"></i
+                  ><a href="mailto:info@example.com">info@example.com</a>
+                </div>
+                <div class="c-row">
+                  <i class="fa-solid fa-location-dot"></i> Mit Abid, Egypt
+                </div>
+              </div>
+
+              <div class="socials mt-3" aria-label="Social links">
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <div class="copyright">
+            <small>&copy; 2025 Sun & Sea Tours. All rights reserved.</small>
+          </div>
+          <div class="footer-meta">
+            <div class="payments">
+              <img src="assets/img/pay-visa.webp" alt="Visa" />
+            </div>
+            <div class="legal">
+              <a href="/privacy.html">Privacy</a>
+              <a href="/terms.html">Terms</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- i18next -->
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.4/i18nextBrowserLanguageDetector.min.js"></script>
+
+    <script>
+      AOS.init({ duration: 600, once: true });
+
+      // Initialize Swiper gallery + thumbs
+      const thumbs = new Swiper(".thumbs", {
+        spaceBetween: 8,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: { 576: { slidesPerView: 5 }, 768: { slidesPerView: 6 } },
+      });
+      const gallery = new Swiper(".gallery-swiper", {
+        loop: true,
+        spaceBetween: 16,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        thumbs: { swiper: thumbs },
+        autoplay: { delay: 3500, disableOnInteraction: false },
+      });
+
+      // Booking modal logic
+      const bookingModalEl = document.getElementById("bookingModal");
+      const bookingModal = new bootstrap.Modal(bookingModalEl, {
+        keyboard: false,
+      });
+      const pkgLabel = document.getElementById("pkgLabel");
+      const pkgPrice = document.getElementById("pkgPrice");
+      const dateFrom = document.getElementById("dateFrom");
+      const dateTo = document.getElementById("dateTo");
+      const adultsEl = document.getElementById("adults");
+      const childrenEl = document.getElementById("children");
+      const roomTypeEl = document.getElementById("roomType");
+      const nightsVal = document.getElementById("nightsVal");
+      const peopleVal = document.getElementById("peopleVal");
+      const totalVal = document.getElementById("totalVal");
+      const bookingForm = document.getElementById("bookingForm");
+
+      // openBooking(packageLabel, basePrice)
+      function openBooking(label, basePrice) {
+        pkgLabel.value = label;
+        pkgPrice.value = basePrice.toLocaleString() + " EGP";
+        // Reset defaults
+        dateFrom.value = "";
+        dateTo.value = "";
+        adultsEl.value = 2;
+        childrenEl.value = 0;
+        roomTypeEl.value = "standard";
+        updateSummary();
+        bookingModal.show();
+      }
+
+      // Quick open var for hero buttons, fallback to default season
+      function openBookingQuick(mode = "default") {
+        // pick first season price shown on page (2475) if no param
+        openBooking("Quick Book", 2475);
+      }
+
+      // compute nights between dateFrom and dateTo (min 1)
+      function computeNights() {
+        if (!dateFrom.value || !dateTo.value) return 1;
+        const from = new Date(dateFrom.value);
+        const to = new Date(dateTo.value);
+        const diff = Math.round((to - from) / (1000 * 60 * 60 * 24));
+        return Math.max(1, diff);
+      }
+
+      function calculateTotal() {
+        const base = Number(pkgPrice.value.replace(/[^0-9.-]+/g, "")) || 0; // EGP per person
+        const nights = computeNights();
+        let adults = parseInt(adultsEl.value) || 1;
+        const children = parseInt(childrenEl.value) || 0;
+
+        // Child policy: first child free (if any), other children pay 50%
+        let childCharge = 0;
+        if (children > 0) {
+          if (children === 1) childCharge = 0;
+          else {
+            // first free, remaining count = children -1 each at 50% of base
+            childCharge = (children - 1) * (base * 0.5);
+          }
+        }
+
+        // room upgrade per room per night
+        const upgradePerNight =
+          Number(roomTypeEl.selectedOptions[0].dataset.upgrade) || 0;
+
+        // Assume 1 room per booking, but upgrade cost applies per room per night
+        // Total for people: (adults * base + childCharge) * nights
+        const peopleCost = (adults * base + childCharge) * nights;
+        const upgradeCost = upgradePerNight * nights; // per room
+        const total = Math.round(peopleCost + upgradeCost);
+
+        return { nights, adults, children, upgradePerNight, total };
+      }
+
+      function updateSummary() {
+        const data = calculateTotal();
+        nightsVal.textContent = data.nights;
+        peopleVal.textContent = `${data.adults} adult(s)${
+          data.children ? " + " + data.children + " child(ren)" : ""
+        }`;
+        totalVal.textContent = "EGP " + data.total.toLocaleString();
+      }
+
+      // events to update summary in real-time
+      [dateFrom, dateTo, adultsEl, childrenEl, roomTypeEl].forEach((el) => {
+        el && el.addEventListener("input", () => updateSummary());
+      });
+
+      // when modal shown, ensure summary updated
+      bookingModalEl.addEventListener("shown.bs.modal", () => updateSummary());
+
+      // Booking form submit -> redirect to checkout.html (simulate payment flow)
+      bookingForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        // basic validation
+        if (!document.getElementById("custName").value.trim()) {
+          alert("Please enter your full name.");
+          return;
+        }
+        if (!document.getElementById("custPhone").value.trim()) {
+          alert("Please enter your phone number.");
+          return;
+        }
+        // compute final
+        const { nights, adults, children, upgradePerNight, total } =
+          calculateTotal();
+        const payload = {
+          pkg: pkgLabel.value,
+          basePricePerPerson: pkgPrice.value,
+          nights,
+          adults,
+          children,
+          upgradePerNight,
+          total,
+          from: dateFrom.value || "",
+          to: dateTo.value || "",
+          name: document.getElementById("custName").value.trim(),
+          phone: document.getElementById("custPhone").value.trim(),
+          notes: document.getElementById("notes").value.trim(),
+        };
+
+        // encode payload to query string and redirect to checkout page (replace with real payment endpoint)
+        const params = new URLSearchParams(payload).toString();
+        // For demo we redirect to checkout.html (you should build this to handle query params securely)
+        window.location.href = "checkout.html?" + params;
+      });
+
+      // small safety: ensure thumbs click syncs to main for older browsers
+      document.querySelectorAll(".thumbs .swiper-slide").forEach((s, idx) => {
+        s.addEventListener("click", () => gallery.slideToLoop(idx));
+      });
+
+      // prefill page initial package price (for quick book)
+      document.addEventListener("DOMContentLoaded", () => {
+        // nothing else required
+      });
+    </script>
+  </body>
+</html>

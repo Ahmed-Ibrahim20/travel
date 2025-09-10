@@ -1,0 +1,25 @@
+{
+    "name": "Dahab Dream Tours - Egypt Travel",
+    "short_name": "Dahab Dream",
+    "description": "Book Egypt tours with Dahab Dream Tours - Hurghada, Sharm El Sheikh, North Coast trips and honeymoon packages",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1e40af",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/assets/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["travel", "tourism", "booking"],
+    "lang": "en",
+    "dir": "ltr"
+}
