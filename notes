@@ -1,0 +1,6 @@
+//
+        if (request()->header('x-forwarded-proto') == 'https') {
+            URL::forceScheme('https');
+        }  
+notes
+
